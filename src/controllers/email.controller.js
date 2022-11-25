@@ -11,7 +11,7 @@ exports.sendEmail = async (req, res) => {
   const data = req.body.emails;
   const configs = req.body.smtp;
   const emailData = req.body.emailData;
- console.log(emailData)
+
   try {
     let transporter = nodemailer.createTransport({
       host: `${configs.host}`,
@@ -25,7 +25,7 @@ exports.sendEmail = async (req, res) => {
 
     for (i = 0; i < data.length; i++) {
       await transporter.sendMail({
-        from: `${emailData.senderName} <contact@avoconsulte.com>`, // sender address
+        from: `${emailData.senderName} <${configs.user}>`, // sender address
         to: `${data[i].email}`, // list of receivers
         subject: `${emailData.subject}`, // Subject line
         html: `${replaceString(emailData.emailBody, data[i].name)}` // html body
