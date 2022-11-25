@@ -1,0 +1,26 @@
+### RESET PASSWORD
+POST http://localhost:4000/send HTTP/1.1
+content-type: application/json 
+
+{
+    "smtp": {
+        "host": "oxa.email",
+        "user": "contact@avoconsulte.com",
+        "pass": "tAqTZ4$zni"
+        },
+    "emailData": {
+         "senderName" :" Alaa",
+         "subject" : "Contact",
+         "emailBody": "this the body [[name]]"
+    },
+    "emails" : [
+        {
+        "name":"alaa",
+        "email":"95benmbarek@gmail.com"
+        },
+        {
+        "name":"ben mbarek",
+        "email":"95benmbarek@gmail.com"
+        }
+    ]
+}
