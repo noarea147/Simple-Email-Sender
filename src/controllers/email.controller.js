@@ -7,15 +7,6 @@ exports.sendEmail = async (req, res) => {
   const emailData = req.body.emailData;
 
   try {
-    // let transporter = nodemailer.createTransport({
-    //   host: "oxa.email",
-    //   port: 25,
-    //   secure: false, // true for 465, false for other ports
-    //   auth: {
-    //     user: "contact@avoconsulte.com", // generated ethereal user
-    //     pass: "tAqTZ4$zni" // generated ethereal password
-    //   }
-    // });
     let transporter = nodemailer.createTransport({
       host: "vps87356.inmotionhosting.com",
       port: 25,
@@ -26,7 +17,9 @@ exports.sendEmail = async (req, res) => {
       }
     });
 
-    let response = await transporter.sendMail({
+    res.send("just saying hi");
+
+    await transporter.sendMail({
       from: `${emailData.senderName} <smtp@westchasemarket.com>`, // sender address
       to: `${email}`, // list of receivers
       subject: `${emailData.subject}`, // Subject line
