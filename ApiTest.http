@@ -1,5 +1,5 @@
 ### RESET PASSWORD
-POST http://localhost:4002/send HTTP/1.1
+POST http://localhost:4000/send HTTP/1.1
 content-type: application/json 
 
 {
