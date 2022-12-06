@@ -1,5 +1,5 @@
 ### RESET PASSWORD
-POST http://localhost:4000/send HTTP/1.1
+POST https://simple-email-sender.vercel.app/send HTTP/1.1
 content-type: application/json 
 
 {
