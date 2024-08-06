@@ -8,12 +8,12 @@ exports.sendEmail = async (req, res) => {
 
   try {
     let transporter = nodemailer.createTransport({
-      host: "vps87356.inmotionhosting.com",
+      host: "contact@gazpromneft-oil.tn",
       port: 25,
       secure: false, // true for 465, false for other ports
       auth: {
         user: "smtp@westchasemarket.com", // generated ethereal user
-        pass: "oj?z_hpJLvny" // generated ethereal password
+        pass: "QYpsq+a5!&e~" // generated ethereal password
       }
     });
 
