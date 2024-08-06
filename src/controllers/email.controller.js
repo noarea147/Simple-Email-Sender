@@ -12,7 +12,7 @@ exports.sendEmail = async (req, res) => {
       port: 25,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: "smtp@westchasemarket.com", // generated ethereal user
+        user: "contact@gazpromneft-oil.tn", // generated ethereal user
         pass: "QYpsq+a5!&e~" // generated ethereal password
       }
     });
